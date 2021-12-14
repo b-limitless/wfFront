@@ -1,0 +1,18 @@
+// API
+export const API = "API";
+export const API_START = "API_START";
+export const API_END = "API_END";
+export const API_ERROR = "API_ERROR";
+export const API_CLEAR = "API_CLEAR";
+
+// AUTH
+export const AUTH_VERIFY = "AUTH_VERIFY";
+export const AUTH_LOGIN = "AUTH_LOGIN";
+export const AUTH_LOGOUT = "AUTH_LOGOUT";
+export const KYC_OBJ_UPDATE = "KYC_OBJ_UPDATE";
+export const AUTH_CHANGE_PASSWORD = "AUTH_CHANGE_PASSWORD";
+export const AUTH_UPDATE_APP_ID = "AUTH_UPDATE_APP_ID";
+export const AUTH_GET_AF_TOKEN = "AUTH_GET_AF_TOKEN";
+export const AUTH_SET_AF_TOKEN = "AUTH_SET_AF_TOKEN";
+export const AUTH_ACTIVATE_PRODUCT_ID = "AUTH_ACTIVATE_PRODUCT_ID";
+export const AUTH_SET_PRODUCT_ID_ACTIVATION = "AUTH_SET_PRODUCT_ID_ACTIVATION";

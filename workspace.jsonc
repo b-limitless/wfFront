@@ -1,0 +1,89 @@
+/**
+ * this is the main configuration file of your bit workspace.
+ * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
+ **/{
+  "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
+  /**
+   * main configuration of the Bit workspace.
+   **/
+  "teambit.workspace/workspace": {
+    /**
+     * the name of the component workspace. used for development purposes.
+     **/
+    "name": "trolly",
+    /**
+     * set the icon to be shown on the Bit server.
+     **/
+    "icon": "https://static.bit.dev/bit-logo.svg",
+    /**
+     * default directory for all components in workspace, the following placeholders are available:
+     * name - component name includes namespace, e.g. 'ui/button'.
+     * scopeId - full scope-id includes the owner, e.g. 'teambit.compilation'.
+     * scope - scope name only, e.g. 'compilation'.
+     * owner - owner name in bit.dev, e.g. 'teambit'.
+     **/
+    "defaultDirectory": "src/trolly",
+    /**
+     * default scope for all components in workspace.
+     **/
+    "defaultScope": "wf-org.trolly"
+  },
+  /**
+   * main configuration for component dependency resolution.
+   **/
+  "teambit.dependencies/dependency-resolver": {
+    "packageManager": "teambit.dependencies/yarn",
+    "policy": {
+      "peerDependencies": {
+        "lodash": ">=4.17.21",
+        "@material-ui/core": ">=4.9.11",
+        "@material-ui/system": ">=4.11.3",
+        "@material-ui/lab": ">=4.0.0-alpha.57",
+        "@material-ui/pickers": ">=3.3.10",
+        "@material-ui/icons": ">=4.11.2",
+        "date-fns": ">=2.19.0",
+        "react-router-dom": ">=5.2.0",
+        "react-webcam": ">=5.2.3",
+        "react-window": ">=1.8.6",
+        "@date-io/date-fns": ">=1.3.13",
+        "react": ">=16.13.0",
+        "react-dom": ">=16.13.0",
+        "libphonenumber-js": ">=1.9.16",
+        "react-redux": ">=7.2.2",
+        "react-router": ">=5.2.0",
+        "axios": ">=0.21.1",
+        "redux": ">=4.0.5",
+        "redux-thunk": ">=2.3.0",
+        "highcharts": ">=9.0.1",
+        "highcharts-react-official": ">=3.0.0",
+        "autosuggest-highlight": ">=3.1.1"
+      },
+      "devDependencies": {
+        "redux-devtools-extension": ">=2.13.9"
+      }
+    }
+  },
+  /**
+   * workspace variants allow to set different subsets of configuration for components in your workspace.
+   * this is extremely useful for upgrading, aligning and building components with a
+   * new set of dependencies.
+   **/
+  "teambit.workspace/variants": {
+    /**
+     * "*" is a special rule which applied on all components in the workspace.
+     **/
+    "*": {
+      "teambit.react/react": {
+        "typescript": true
+      }
+    },
+    "utils": {
+      /**
+       * uncomment to apply the react environment on all components.
+       **/
+      "teambit.harmony/node": {
+        "typescript": true
+      }
+    }
+  }
+}
